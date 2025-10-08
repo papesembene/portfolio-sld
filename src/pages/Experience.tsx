@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <div className="min-h-screen pt-24 px-6 pb-12">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-12 gradient-text animate-fade-in">
+        <h1 className="text-3xl md:text-6xl font-bold mb-12 gradient-text animate-fade-in">
           Expériences Professionnelles
         </h1>
 
@@ -36,7 +36,7 @@ const Experience = () => {
 
           <div className="glass p-8 rounded-2xl animate-fade-in hover-glow">
             <h2 className="text-2xl font-bold mb-6 text-accent">Compétences en Design</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 'Création Logo',
                 'Création Affiche',

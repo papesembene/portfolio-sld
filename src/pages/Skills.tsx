@@ -54,7 +54,7 @@ const Skills = () => {
   return (
     <div className="min-h-screen pt-24 px-6 pb-12">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-12 gradient-text animate-fade-in">
+        <h1 className="text-3xl md:text-6xl font-bold mb-12 gradient-text animate-fade-in">
           Compétences & Outils
         </h1>
 
@@ -72,7 +72,7 @@ const Skills = () => {
                 <h2 className="text-2xl font-bold text-accent">{category.title}</h2>
               </div>
               
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {category.skills.map((skill) => (
                   <div 
                     key={skill}

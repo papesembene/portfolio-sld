@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 px-6 pb-12">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text animate-fade-in">
+        <h1 className="text-3xl md:text-6xl font-bold mb-8 gradient-text animate-fade-in">
           À Propos de Moi
         </h1>
 
@@ -55,7 +55,7 @@ const About = () => {
               <Target className="text-accent mt-1" size={32} />
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-accent">Mes Soft Skills</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {['Connaissance', 'Créativité', 'Compétence', 'Travail d\'équipe', 'Story telling', 'Motivation'].map((skill) => (
                     <div key={skill} className="bg-secondary/50 px-4 py-2 rounded-lg text-center hover:bg-secondary transition-colors">
                       {skill}

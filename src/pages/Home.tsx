@@ -26,17 +26,17 @@ const Home = () => {
               une carrière utile, humaine et tournée vers les solutions concrètes.
             </p>
             
-            <div className="flex gap-4 pt-4">
-              <Link 
-                to="/contact" 
-                className="glass px-8 py-3 rounded-full hover-glow flex items-center gap-2 group"
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link
+                to="/contact"
+                className="glass px-8 py-3 rounded-full hover-glow flex items-center justify-center gap-2 group"
               >
                 Me Contacter
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
-              <Link 
-                to="/about" 
-                className="px-8 py-3 border border-border rounded-full hover:border-accent transition-colors"
+              <Link
+                to="/about"
+                className="px-8 py-3 border border-border rounded-full hover:border-accent transition-colors text-center"
               >
                 En Savoir Plus
               </Link>
