@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 30 20% 8%;
+    --foreground: 35 45% 92%;
+
+    --card: 25 15% 12%;
+    --card-foreground: 35 45% 92%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 35 45% 92%;
+
+    --primary: 30 60% 45%;
+    --primary-foreground: 35 45% 98%;
+
+    --secondary: 25 30% 20%;
+    --secondary-foreground: 35 45% 92%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 25% 65%;
+
+    --accent: 35 70% 55%;
+    --accent-foreground: 25 15% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 18%;
+    --ring: 30 60% 45%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    cursor: none;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/30 backdrop-blur-xl border border-border/50;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_rgba(184,134,91,0.3)];
+  }
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsl(var(--accent));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: hsl(var(--accent));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.15s ease;
+}
+
+/* Snowflake animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: hsl(var(--accent) / 0.3);
+  font-size: 1em;
+  pointer-events: none;
+  z-index: 1;
+  animation: snowfall linear infinite;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid hsl(var(--accent));
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
